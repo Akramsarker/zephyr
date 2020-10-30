@@ -1,8 +1,7 @@
 /********tablet*******/
 /* navbar */
 #navbar .top-contact {
-    display: flex;
-    justify-content: center;
+    display: none;
 }
 
 #navbar .main-nav {
@@ -26,6 +25,7 @@
 #showcase .info-showcase {
     grid-template-columns: 1fr;
     text-align: center;
+    padding-top: 0;
 }
 
 #showcase .info-showcase .bottom-side {
@@ -38,6 +38,11 @@
 /* section a:hosting */
 #hosting .items {
     grid-template-columns: repeat(2, 1fr);
+}
+
+/* section-b:section-b */
+#section-b  {
+    padding-bottom: 2rem;
 }
 
 /*  section-c section-c */
@@ -60,7 +65,14 @@
 #company .step-1, #company .step-2 {
     grid-template-columns: 1fr;
 }
+#company .margin-left {
+    margin: 0;
+    text-align: center;
+}
 
+#informations .logo img {
+    width: 90px;
+}
 
  /* footer */
  #footer .footer > div  {
@@ -91,7 +103,6 @@
 }
 
 /****** mobile screen *******/
-
 @media(max-width: 600px) {
     /* buttom */
     .secend-btn {
@@ -102,7 +113,10 @@
 
     /* navbar */
     #navbar .main-nav .link ul li {
-        margin-left: 0rem;
+        margin-left: 10px;
+    }
+    #navbar .main-nav .link ul li:first-child {
+        margin-left: 0;
     }
 
     #navbar .main-nav .btn-side {
@@ -140,7 +154,6 @@
         font-size: 2.5rem;
         line-height: 3.3rem;
         margin-bottom: 2rem;
-
     }
 
     #hosting .info-header p {
@@ -184,10 +197,10 @@
     }
 
     /*section-c section-c */
-    
     #section-c .box {
         width: 100%;
     }
+
     #section-c .items-box {
         position: unset;
     }
@@ -208,7 +221,6 @@
         grid-template-columns: 1fr;
         padding-bottom: 4rem;
         padding: 0 1rem;
-    
     }
 
     #company .step-2 div {
@@ -242,7 +254,6 @@
     }
 
     #informations .logo {
-        grid-template-columns: repeat(2, 1fr);
         align-items: center;
         margin-top: 3rem;
         padding-bottom: 5rem;
@@ -295,4 +306,13 @@
     #footer .footer {
         grid-template-columns: 1fr;
     }  
+
+    #footer .footer .side-menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #footer .side-menu input{
+        margin-bottom: 2rem;
+    }
 }
